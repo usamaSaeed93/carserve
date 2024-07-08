@@ -4,7 +4,7 @@ const {
   INTERNAL_SERVER_ERROR,
   INVALID_PAYLOAD
 } = require('@evershop/evershop/src/lib/util/httpStatus');
-const { error } = require('@evershop/evershop/src/lib/log/logger');
+const { error, info } = require('@evershop/evershop/src/lib/log/logger');
 const {
   translate
 } = require('@evershop/evershop/src/lib/locale/translate/translate');
@@ -15,9 +15,13 @@ module.exports = async (request, response, delegate, next) => {
   try {
     const { cart_id } = request.params;
     const { method_code } = request.body;
+
+    info(`Received request to set shipping method. Cart ID: ${cart_id}, Method Code: ${method_code}`);
+
     // Check if cart exists
     const cart = await getCartByUUID(cart_id);
     if (!cart) {
+      info(`Cart not found. Cart ID: ${cart_id}`);
       response.status(INVALID_PAYLOAD).json({
         error: {
           message: 'Invalid cart',
@@ -25,11 +29,13 @@ module.exports = async (request, response, delegate, next) => {
         }
       });
     } else {
-      // Save payment method
+      info(`Cart found. Cart ID: ${cart_id}`);
+      // Save shipping method
       await cart.setData('shipping_method', method_code);
 
       // Save the cart
       await saveCart(cart);
+      info(`Shipping method saved successfully. Cart ID: ${cart_id}, Method Code: ${method_code}`);
       response.status(OK);
       response.$body = {
         data: {
@@ -41,7 +47,7 @@ module.exports = async (request, response, delegate, next) => {
       next();
     }
   } catch (e) {
-    error(e);
+    error(`Failed to set shipping method. Error: ${e.message}`);
     response.status(INTERNAL_SERVER_ERROR);
     response.json({
       error: {

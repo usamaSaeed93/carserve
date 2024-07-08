@@ -3,6 +3,7 @@ import Area from '@components/common/Area';
 import LoadingBar from '@components/common/LoadingBar';
 import './Layout.scss';
 import './tailwind.scss';
+import MegaMenu from './MegaMenu';
 
 export default function Layout() {
   return (
@@ -28,7 +29,7 @@ export default function Layout() {
         <Area id="content" className="" noOuter />
       </main>
       <div className="footer">
-        <Area id="footer" noOuter coreComponents={[]} />
+        {/* <Area id="footer" noOuter coreComponents={[]} /> */}
       </div>
     </>
   );

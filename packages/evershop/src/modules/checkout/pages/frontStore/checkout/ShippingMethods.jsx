@@ -106,6 +106,7 @@ export default function ShippingMethods({
     async function saveMethods() {
       // Get the selected method
       const selectedMethod = methods.find((m) => m.selected === true);
+      console.log("selected method",selectedMethod)
       try {
         const response = await axios.post(
           addShippingMethodApi,
@@ -125,10 +126,11 @@ export default function ShippingMethods({
             `${address.address1}, ${address.city}, ${address.country.name}`
           );
         } else {
-          toast.error(response.data.error.message);
+          toast.error(`Error: ${response.data.error.message || 'Unknown error'}`);
         }
       } catch (error) {
-        toast.error(error.message);
+        console.error('Error saving methods:', error); // Log the error
+        toast.error(`Error: ${error.message || 'Unknown error'}`);
       }
     }
     if (formContext.state === 'submitSuccess') {

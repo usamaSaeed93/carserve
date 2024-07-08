@@ -10,7 +10,7 @@ export default function Menu({ menu: { items } }) {
           // eslint-disable-next-line react/no-array-index-key
           <li className="nav-item" key={index}>
             <a className="nav-link hover:underline" href={i.url}>
-              {i.name}
+              {/* {i.name} */}
             </a>
           </li>
         ))}

@@ -45,26 +45,11 @@
     "react/no-unstable-nested-components": "off",
     "no-continue": "off",
     "no-await-in-loop": "off",
-    "no-use-before-define" : "off",
+    "no-use-before-define": "off",
     "global-require": "off",
     "import/extensions": "off",
     "no-shadow": "off",
     "no-lonely-if": "warn",
     "no-console": "error"
-  },
-  "ignorePatterns": [
-    "/node_modules/",
-    "**/*test.js",
-    "**/tests/**",
-    "**/create-evershop-app/**",
-    "/.evershop/**",
-    "/.vscode/**",
-    "/.git/**",
-    "/.idea/**",
-    "/extensions/**",
-    "/public/**",
-    "/themes/**",
-    "/media/**",
-    "/mysqlToPostgres.js"
-  ]
+  }
 }

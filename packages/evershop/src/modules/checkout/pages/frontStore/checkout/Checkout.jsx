@@ -150,7 +150,7 @@ export const query = `
       cartId
     }
     placeOrderAPI: url(routeId: "createOrder")
-    getPaymentMethodAPI: url(routeId: "getPaymentMethods")
+     getPaymentMethodAPI: url(routeId: "getPaymentMethods")
     checkoutSuccessUrl: url(routeId: "checkoutSuccess")
-  }
-`;
+    }
+    `;

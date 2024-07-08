@@ -9,14 +9,14 @@ export default function Logo({
 }) {
   return (
     <div className="logo">
-      {src && (
+      {/* {src && (
         <a href="/" className="logo-icon">
-          <img src={src} alt={alt} width={width} height={height} />
+          <img src='/carServe_logo.png' alt="none" width={120} height={height} />
         </a>
-      )}
+      )} */}
       {!src && (
         <a href="/" className="logo-icon">
-          <svg
+          {/* <svg
             width="128"
             height="146"
             viewBox="0 0 128 146"
@@ -35,7 +35,9 @@ export default function Logo({
               d="M123.771 66.7261C121.943 67.7562 107.854 75.8976 92.4349 84.8033C77.0161 93.7089 64.289 100.986 64.1228 100.986C63.9567 100.986 55.3501 96.0683 44.9491 90.0869L26.0744 79.1874L25.9747 86.8303C25.9082 92.6788 26.0079 94.5729 26.307 94.872C26.9383 95.4369 63.7241 116.604 64.1228 116.604C64.4551 116.604 126.496 80.8821 127.027 80.4169C127.16 80.284 127.227 76.7284 127.194 72.4749L127.094 64.7987L123.771 66.7261Z"
               fill="#1F1F1F"
             />
-          </svg>
+          </svg> */}
+                    <img src='/carServe_logo.png' alt="none" width={120} height={height} />
+
         </a>
       )}
     </div>
