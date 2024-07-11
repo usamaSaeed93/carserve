@@ -6,7 +6,7 @@ export default function Logo({ dashboardUrl }) {
   return (
     <div className="logo">
       <a href={dashboardUrl} className="flex items-end">
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           width="254"
           height="292"
@@ -60,8 +60,9 @@ export default function Logo({ dashboardUrl }) {
               <stop offset="1" stopColor="#27BEA3" />
             </linearGradient>
           </defs>
-        </svg>
-        <span className="font-bold">EVERSHOP</span>
+        </svg> */}
+                            {/* <img src='/carServe_logo.png' alt="none" width={120} height="auto" /> */}
+
       </a>
     </div>
   );
