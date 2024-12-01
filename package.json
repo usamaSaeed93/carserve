@@ -17,17 +17,13 @@
     "extensions/*"
   ],
   "scripts": {
-    "dev": "evershop dev",
     "setup": "evershop install",
     "build": "evershop build",
     "start": "evershop start",
-    "user:create": "evershop user:create",
-    "user:changePassword": "evershop user:changePassword",
     "start:debug": "evershop start --debug",
-    "test": "jest --workspace=@evershop/evershop",
-    "cypress": "cypress run",
-    "lint": "eslint --fix --ext .js,.jsx .",
-    "prepare": "husky install"
+    "dev": "evershop dev",
+    "user:create": "evershop user:create",
+    "user:changePassword": "evershop user:changePassword"
   },
   "author": "The Nguyen (https://evershop.io)",
   "license": "GNU GENERAL PUBLIC LICENSE 3.0",
@@ -55,7 +51,7 @@
     "rxjs": "^7.2.0",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^3.4.15",
     "webpack-bundle-analyzer": "^4.5.0"
   },
   "dependencies": {
@@ -63,8 +59,17 @@
     "@evershop/s3_file_storage": "^1.0.0",
     "aos": "^2.3.4",
     "aws-sdk": "^2.1654.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "detective": "^5.2.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.456.0",
     "react-icons": "^5.2.1",
     "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1"
+    "react-toastify": "^10.0.6",
+    "setup": "^0.0.3",
+    "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

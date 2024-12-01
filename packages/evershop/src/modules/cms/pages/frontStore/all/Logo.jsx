@@ -36,7 +36,7 @@ export default function Logo({
               fill="#1F1F1F"
             />
           </svg> */}
-                    <img src='/carServe_logo.png' alt="none" width={120} height={height} />
+                    {/* <img src='/carServe_logo.png' alt="none" width={120} height={height} /> */}
 
         </a>
       )}
